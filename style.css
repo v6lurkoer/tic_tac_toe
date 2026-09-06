@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* colorcombinations.org/palettes/sakura-wakatake */
+  --color-sakura: #F9D5E0;    /* cherry blossom pink */
+  --color-wakatake: #A3C293;  /* young bamboo green */
+  --color-kinari: #F8F4E9;    /* unbleached natural */
+  --color-matsuba: #4C5D3F;   /* pine needle dark */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+header {
+  background-color: var(--color-kinari);
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+#container {
+  flex-grow: 1;
+
+  display: flex;
+}
+
+#newGameButtonContainer {
+  display: flex;
+  width: 50px;
+}
+
+#newGameButton {
+  flex-grow: 1;
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.2rem;
+  background-color: var(--color-kinari);
+  border: none;
+}
+
+#newGameButton:hover {
+  background-color: #F8EDE9;
+  cursor: pointer;
+}
+
+#gameContainer {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  height: 500px;
+  width: 500px;
+}
+
+.boardSquare {
+  width: 100%;
+}
+
+.boardSquare button {
+  height: 100%;
+  width: 100%;
+}
