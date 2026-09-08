@@ -75,11 +75,11 @@ h1 {
   width: 500px;
 }
 
-.boardSquare {
+#gameBoard div {
   width: 100%;
 }
 
-.boardSquare button {
+.boardSquare {
   height: 100%;
   width: 100%;
 }
