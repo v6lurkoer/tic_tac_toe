@@ -4,6 +4,7 @@
 }
 
 :root {
+  font-family: "Arial", "system-ui";
   /* colorcombinations.org/palettes/sakura-wakatake */
   --color-sakura: #F9D5E0;    /* cherry blossom pink */
   --color-wakatake: #A3C293;  /* young bamboo green */
@@ -22,8 +23,14 @@ body {
   height: 100%;
 }
 
-header {
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--color-kinari);
+  height: 50px;
 }
 
 h1 {
@@ -39,10 +46,12 @@ h1 {
 
 #newGameButtonContainer {
   display: flex;
+  flex-direction: column;
   width: 50px;
 }
 
-#newGameButton {
+#newGameButton,
+#setNameButton {
   flex-grow: 1;
 
   writing-mode: vertical-rl;
@@ -52,13 +61,19 @@ h1 {
   border: none;
 }
 
-#newGameButton:hover {
+#newGameButton:hover,
+#setNameButton:hover {
   background-color: #F8EDE9;
   cursor: pointer;
 }
 
+.colored {
+  background-color: grey;
+}
+
 #gameContainer {
   flex-grow: 1;
+  flex-shrink: 0;
 
   display: flex;
   flex-direction: column;
@@ -82,4 +97,22 @@ h1 {
 .boardSquare {
   height: 100%;
   width: 100%;
+}
+
+#nameFormContainer {
+  visibility: hidden;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  margin: 0 auto;
+}
+
+.nameFieldContainer {
+  display: flex;
+  flex-container: column;
+  justify-content: space-between;
 }

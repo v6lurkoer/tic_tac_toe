@@ -13,6 +13,7 @@
     <div id="container">
       <div id="newGameButtonContainer">
         <button id="newGameButton">NEW GAME</button>
+        <button id="setNameButton">ADD NAME</button>
       </div>
       <div id="gameContainer">
         <div id="gameBoard">
@@ -26,9 +27,25 @@
           <div><button class="boardSquare" data-array-index="7"></button></div>
           <div><button class="boardSquare" data-array-index="8"></button></div>
         </div>
-        <div>
+        <div id="nameFormContainer">
+          <form id="nameForm" action="" method="get">
+            <fieldset>
+              <legend>Enter player names</legend>
+              <div class="nameFieldContainer">
+                <label for="firstPlayerName">First player name</label>
+                <input type="text" name="firstPlayerName" required></input>
+              </div>
+              <div class="nameFieldContainer">
+                <label for="secondPlayerName">Second player name</label>
+                <input type="text" name="secondPlayerName" required></input>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
+    <footer>
+      <p>Made by <a href="https://github.com/v6lurkoer" target="_blank">v6lurkoer</a> with the guidance of <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> <3</p>
+    </footer>
   </body>
 </html>
