@@ -28,24 +28,28 @@
           <div><button class="boardSquare" data-array-index="8"></button></div>
         </div>
         <div id="nameFormContainer">
-          <form id="nameForm" action="" method="get">
-            <fieldset>
-              <legend>Enter player names</legend>
-              <div class="nameFieldContainer">
-                <label for="firstPlayerName">First player name</label>
-                <input type="text" name="firstPlayerName" required></input>
+          <form action="" method="get">
+            <div id="formContainer">
+              <div id="nameFieldContainer">
+                <div class="nameField">
+                  <label for="firstPlayerName">First player name</label>
+                  <input type="text" name="firstPlayerName" required></input>
+                </div>
+                <div class="nameField">
+                  <label for="secondPlayerName">Second player name</label>
+                  <input type="text" name="secondPlayerName" required></input>
+                </div>
               </div>
-              <div class="nameFieldContainer">
-                <label for="secondPlayerName">Second player name</label>
-                <input type="text" name="secondPlayerName" required></input>
+              <div id="submitButtonContainer">
+                <button id="submitButton" type="submit">Submit</button>
               </div>
-            </fieldset>
+            </div>
           </form>
         </div>
       </div>
     </div>
     <footer>
-      <p>Made by <a href="https://github.com/v6lurkoer" target="_blank">v6lurkoer</a> with the guidance of <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> <3</p>
+      <p>Made by <a href="https://github.com/v6lurkoer" target="_blank"><strong>v6lurkoer</strong></a> with the guidance of <a href="https://www.theodinproject.com/" target="_blank"><strong>The Odin Project</strong></a> <3</p>
     </footer>
   </body>
 </html>

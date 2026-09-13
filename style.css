@@ -5,6 +5,8 @@
 
 :root {
   font-family: "Arial", "system-ui";
+  font-size: 16px;
+  color: var(--color-matsuba);
   /* colorcombinations.org/palettes/sakura-wakatake */
   --color-sakura: #F9D5E0;    /* cherry blossom pink */
   --color-wakatake: #A3C293;  /* young bamboo green */
@@ -21,6 +23,7 @@ body {
   flex-direction: column;
 
   height: 100%;
+  background-color: var(--color-sakura);
 }
 
 header,
@@ -51,6 +54,12 @@ h1 {
 }
 
 #newGameButton,
+#setNameButton,
+#submitButton {
+  color: var(--color-matsuba);
+}
+
+#newGameButton,
 #setNameButton {
   flex-grow: 1;
 
@@ -62,13 +71,27 @@ h1 {
 }
 
 #newGameButton:hover,
-#setNameButton:hover {
-  background-color: #F8EDE9;
+#setNameButton:hover,
+.boardSquare:hover,
+#submitButton:hover {
+  background-color: var(--color-wakatake);
   cursor: pointer;
 }
 
-.colored {
-  background-color: grey;
+#newGameButton:hover,
+#setNameButton:hover,
+#submitButton:hover {
+  color: black;
+}
+
+#newGameButton:active,
+.boardSquare:active,
+#submitButton:active {
+  box-shadow: inset -1px -1px var(--color-matsuba);
+}
+
+#setNameButton:active {
+  box-shadow: inset -1px 1px var(--color-matsuba);
 }
 
 #gameContainer {
@@ -79,12 +102,14 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 #gameBoard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  gap: 2px;
 
   height: 500px;
   width: 500px;
@@ -97,22 +122,63 @@ h1 {
 .boardSquare {
   height: 100%;
   width: 100%;
+  border-radius: unset;
+  border: none;
+  background-color: var(--color-kinari);
 }
 
 #nameFormContainer {
   visibility: hidden;
+
 }
 
 fieldset {
   border: none;
 }
 
-legend {
-  margin: 0 auto;
+#formContainer {
+  display: flex;
+  gap: 10px;
+
+  padding: 10px;
 }
 
-.nameFieldContainer {
+#nameFieldContainer {
   display: flex;
-  flex-container: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nameField {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  height: 3ch;
+  border: none;
+  padding: 0 0 0 2px;
+}
+
+input:focus {
+  outline: 1px solid var(--color-matsuba);
+}
+
+#submitButton {
+  height: 100%;
+  width: 17ch;
+  border-radius: unset;
+  border: none;
+  background-color: var(--color-kinari);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-matsuba);
+}
+
+a:hover {
+  color: black;
 }
